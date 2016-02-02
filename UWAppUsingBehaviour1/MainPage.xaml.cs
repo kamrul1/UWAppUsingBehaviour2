@@ -28,12 +28,5 @@ namespace UWAppUsingBehaviour1
             this.InitializeComponent();
         }
 
-        private async void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
-        {
-            if (!(sender as ToggleSwitch).IsOn)
-            {
-                await new MessageDialog("Turning this system is very bad :-(", "Warning").ShowAsync();
-            }
-        }
     }
 }

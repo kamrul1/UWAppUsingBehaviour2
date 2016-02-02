@@ -5,10 +5,14 @@
     xmlns:local="using:UWAppUsingBehaviour1"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <ToggleSwitch IsOn="True" OnContent="Enabled" OffContent="Disabled" Toggled="ToggleSwitch_Toggled"/>
-
+        <ToggleSwitch IsOn="True" OnContent="Enabled" OffContent="Disabled">
+            <i:Interaction.Behaviors>
+                <local:WarningToggleBehaviour Message="You messed up bad"/>
+            </i:Interaction.Behaviors>
+        </ToggleSwitch>
     </Grid>
 </Page>
